@@ -1,0 +1,17 @@
+<h1>Actors</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for actor <- @actors do %>
+      <tr>
+        <td>{actor.name}</td>
+        <td>{actor.age}</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -18,6 +18,14 @@ defmodule PhoenixApiWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/actors", PageController, :actors
+  end
+
+  scope "/api", PhoenixApiWeb do
+    pipe_through :api
+
+    resources "/actors", ActorController, except: [:new, :edit]
+    resources "/films", FilmController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
