@@ -25,7 +25,7 @@ defmodule PhoenixApiWeb.Router do
     pipe_through :api
 
     resources "/actors", ActorController, except: [:new, :edit]
-    resources "/films", FilmController, except: [:new, :edit]
+    resources "/movies", MovieController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
