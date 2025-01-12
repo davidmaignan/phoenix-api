@@ -1,12 +1,13 @@
 defmodule PhoenixApi.Actors.Actor do
   use Ecto.Schema
   import Ecto.Changeset
-  alias PhoenixApi.Films.Film
+
+  alias PhoenixApi.Movies.Movie
 
   schema "actors" do
     field :name, :string
     field :country, :string
-    many_to_many :films, Film, join_through: "actor_film"
+    many_to_many :movies, Movie, join_through: "actor_movie"
 
     timestamps(type: :utc_datetime)
   end

@@ -37,6 +37,8 @@ defmodule PhoenixApi.Actors do
   """
   def get_actor!(id), do: Repo.get!(Actor, id)
 
+  def get_actor_by_name!(name), do: Repo.get_by(Actor, name: name)
+
   @doc """
   Creates a actor.
 

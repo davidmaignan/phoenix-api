@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :phoenix_api, PhoenixApi.Repo,
   username: "admin",
-  password: "password",
+  password: "admin",
   hostname: "localhost",
   database: "phoenix_api_dev",
   stacktrace: true,

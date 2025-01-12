@@ -5,7 +5,7 @@ defmodule PhoenixApi.Movies.Movie do
 
   schema "movies" do
     field :title, :string
-    many_to_many :actors, Actor, join_through: "movies_actors"
+    many_to_many :actors, Actor, join_through: "actor_movie"
     timestamps(type: :utc_datetime)
   end
 

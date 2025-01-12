@@ -11,8 +11,8 @@ defmodule PhoenixApi.ActorsFixtures do
     {:ok, actor} =
       attrs
       |> Enum.into(%{
-        country: "some country",
-        name: "some name"
+        country: "France",
+        name: "Marc Dupont"
       })
       |> PhoenixApi.Actors.create_actor()
 
