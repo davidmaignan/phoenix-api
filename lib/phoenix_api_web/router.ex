@@ -19,6 +19,9 @@ defmodule PhoenixApiWeb.Router do
 
     get "/", PageController, :home
     get "/actors", PageController, :actors
+
+    live "/movies", MovieLive.Index
+    live "/movies/new", MovieLive.New
   end
 
   scope "/api", PhoenixApiWeb do
